@@ -6,12 +6,17 @@ app = Flask(__name__)
 
 @app.route('/')
 
-a = 1
-b = 1
-for q in range (50): 
-    print(a, end=' ')
-    b = b + a
-    a = b - a
+def fibonacci():
+
+    a = 1
+    b = 1
+    fib = '0,'
+
+    for q in range (50): 
+        fib += str(a) + ","
+        b = b + a
+        a = b - a
+    return fib
 
 
 if __name__ == "__main__":
