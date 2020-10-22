@@ -12,3 +12,8 @@ for q in range (50):
     print(a, end=' ')
     b = b + a
     a = b - a
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
